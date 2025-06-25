@@ -1,6 +1,6 @@
 # Setup
 
-## *USED a fork of the Courseflow APP **(stable-test2 history branch)***
+## *USED a fork of the [CourseFlow APP](https://github.com/SALTISES4/CourseFlow/)  **(stable-test2 history branch)***
 
 ---
 
