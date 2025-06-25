@@ -69,7 +69,19 @@ Python Version: **3.11**
 ```
 tar -xzf ./db/db.tar.gz -C ./
 ```
-**FYI** - **ATTEMPT AT YOUR OWN RISK**: If you want to manually seed all the 190 files inside /data, use `utils/seed.teachings.py` & `utils/seed.teachings.py` so that openai & local model embeddings can read the vectors. Depending on the network and the system, it might take **~3 hours** to complete both.
+**FYI** - **ATTEMPT AT YOUR OWN RISK**: If you want to manually seed all the 190 files inside /data, use `utils/seed.teachings.openai.py` & `utils/seed.teachings.py` so that openai & local model embeddings can read the vectors. Depending on the network and the system, it might take **~3 hours** to complete both.
+
+**IMPORTANT INFO**: We have to execute `utils/seed.teachings.py` & `utils/seed.teachings.py` because local LLM models and ChatGPT models dont support the same vector format.
+
+**If you wish to add new files in the DB**: You can create a new folder inside `data/` and then modify the code in `utils/seed.teachings.openai.py` & `utils/seed.teachings.py` (if you want local model to read also) :
+```
+input_dir = "./data/teachings" -> input_dir = "./data/folder"
+```
+
+**If you wish to delete collections and keep the essential ones, change the code in `utils/clean_collections.py`**:
+```
+COLLECTIONS_TO_KEEP = ["teachings", "teachings_openai"] -> COLLECTIONS_TO_KEEP = ["teachings", "teachings_openai", "yourcollection"]
+```
 
 *Test API Server*
 

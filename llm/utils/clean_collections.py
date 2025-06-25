@@ -2,7 +2,7 @@ from pymilvus import MilvusClient
 import os
 
 DB_PATH = "./courseflow_rag.db"
-COLLECTIONS_TO_KEEP = ["outlines", "teachings", "teachings_openai"]
+COLLECTIONS_TO_KEEP = ["teachings", "teachings_openai"]
 
 try:
     if not os.path.exists(DB_PATH):
