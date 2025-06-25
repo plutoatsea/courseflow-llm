@@ -3,11 +3,11 @@
 <h1>FlowChat</h1>
 A Fast and Flexible Few-shot Educational Assistant Built for CourseFlow<br><br>
 
-[![madewithlove](https://img.shields.io/badge/made_with-%E2%9D%A4-red?style=for-the-badge&labelColor=orange)](https://gitlab.com/courseflow/llm#)
+[![madewithlove](https://img.shields.io/badge/made_with-%E2%9D%A4-red?style=for-the-badge&labelColor=orange)](https://github.com/plutoatsea/courseflow-llm/tree/main)
 
 <a href="https://courseflow.ca/" target="_blank"><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQefhO7ftcMeSRkCLyF8MWGV8tubp5KSxuu4g&s' style="width: 55px; height: 55px;" width="55" height="55"/></a>
 
-[![License](https://img.shields.io/badge/LICENSE-Apache-green.svg?style=for-the-badge)](https://gitlab.com/courseflow/llm/-/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/LICENSE-Apache-green.svg?style=for-the-badge)](https://github.com/plutoatsea/courseflow-llm/blob/main/llm/LICENSE)
 
 </div>
 
