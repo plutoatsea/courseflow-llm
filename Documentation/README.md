@@ -1,7 +1,5 @@
 # Planning and Documentation
 
-Go to Plan > Issue boards
-
 ## Architecture Chart
 
 The following diagram shows how the llm project is connected to the original courseflow. Libraries, tools and relationships are also represented visually below.

@@ -1,5 +1,7 @@
 # Setup
 
+## *USED a fork of the Courseflow APP (stable2 branch)* : **[CourseFlow Github](https://github.com/SALTISES4/CourseFlow/tree/stable-test2)**
+
 ---
 
 ## Setup Production Environment
