@@ -36,8 +36,4 @@ A Fast and Flexible Few-shot Educational Assistant Built for CourseFlow<br><br>
 
 ## Demo
 
-<iframe src="https://player.vimeo.com/video/1096313130?h=ed604b888a"
-        width="640" height="360" frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen>
-</iframe>
+#### [Watch the video](https://vimeo.com/1096313130)
