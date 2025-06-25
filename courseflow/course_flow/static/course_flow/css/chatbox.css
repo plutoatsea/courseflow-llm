@@ -1,0 +1,470 @@
+.loader {
+    width: 30px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #0000);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20% { background-position: 0% 0%, 50% 50%, 100% 50%; }
+    40% { background-position: 0% 100%, 50% 0%, 100% 50%; }
+    60% { background-position: 0% 50%, 50% 100%, 100% 0%; }
+    80% { background-position: 0% 50%, 50% 50%, 100% 100%; }
+}
+
+.markdown-message {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+
+.markdown-message pre,
+.markdown-message code {
+  white-space: pre-wrap;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.markdown-message table {
+  max-width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.markdown-message img {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-message,
+.markdown-message * {
+  color: white !important;
+}
+
+.markdown-message h1,
+.markdown-message h2,
+.markdown-message h3,
+.markdown-message h4,
+.markdown-message h5,
+.markdown-message h6,
+.markdown-message p,
+.markdown-message ul,
+.markdown-message ol,
+.markdown-message li {
+  color: white !important;
+  margin: 0.2em 0;
+}
+
+.markdown-message a {
+  color: #00C389 !important;
+  text-decoration: underline;
+}
+
+/* the green‐outlined container */
+.dropup-toolbar {
+  display: flex;
+  align-items: center;
+  border: 2px solid #00C389;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 10px auto;
+  width: 95%;
+  background: white;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+/* each clickable pill */
+.pill {
+  position: relative;
+  padding: 4px 8px;
+  margin: 0 4px;
+  background: #D9D9D9;
+  color: #04BA74;
+  border-radius: 5px;
+  font-size: 11px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.pill .caret {
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* the drop‑up menu */
+.dropup-menu {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  list-style: none;
+  min-width: 120px;
+}
+.dropup-menu li {
+  padding: 8px 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dropup-menu li:hover {
+  background: rgba(255,255,255,0.1);
+}
+.checkmark {
+  float: right;
+  color: #00C389;
+}
+
+/* the little icon buttons on the right */
+.icon-btn {
+  width: 24px;
+  height: 24px;
+  margin-left: 6px;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: .8;
+}
+.icon-btn:hover {
+  opacity: 1;
+}
+
+.icon-group {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+  height: 100%;
+}
+
+/* SVG ICONS IN OPTIONS */
+.upload-btn {
+  background-image: url('../img/images_svg/import.svg');
+}
+.view-files-btn {
+  background-image: url('../img/images_svg/assessment.svg');
+  background-size: 128%;
+}
+
+.copy-btn {
+  background-image: url('../img/images_svg/duplicate_clipboard.svg');
+  height: 16px;
+  width: 16px;
+  background-size: 100%;
+}
+
+.markdown-message li {
+  cursor: move;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.markdown-message li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.markdown-message li.ui-draggable-dragging {
+  background: rgba(4, 186, 116, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.markdown-message li::before {
+  content: "⋮⋮";
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.markdown-message li:hover::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Resize Slider Styles */
+.resize-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    cursor: ew-resize;
+    background-color: #E9EBF2;
+    transition: background-color 0.2s;
+    z-index: 10;
+}
+
+.resize-slider:hover,
+.resize-slider:active {
+    background-color: #04BA74;
+}
+
+.resize-slider::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 30px;
+    background-color: #04BA74;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.resize-slider:hover::after,
+.resize-slider:active::after {
+    opacity: 1;
+}
+
+/* Reference Context Styles */
+.reference-circles {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  flex-wrap: wrap;
+}
+
+.reference-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.reference-circle:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.reference-popup {
+  position: absolute;
+  background: #000;
+  border: 2px solid #00C389;
+  border-radius: 8px;
+  padding: 12px;
+  width: 90px;
+  max-height: 50px;
+  overflow-y: auto;
+  z-index: 9999;
+  display: none;
+  pointer-events: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  right: -30px;
+  transform: translateX(50%);
+  bottom: 100%;
+  margin-bottom: 10px;
+}
+
+/* Create an invisible area that connects the circle to the popup */
+.reference-circle::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: calc(100% + 10px);
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Create a hover area that includes both the circle and popup */
+.reference-circle:hover::before {
+  pointer-events: auto;
+}
+
+.reference-circle:hover .reference-popup {
+  display: block;
+  pointer-events: auto;
+}
+
+.reference-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #00C389 transparent transparent transparent;
+}
+
+.reference-popup-title {
+  color: #00C389;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reference-popup-content {
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* Chat Container Styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 250px);
+  position: relative;
+  background: white;
+}
+
+/* Messages Container */
+.chat-container > div:first-child {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input Area */
+.chat-container > div:last-child {
+  flex-shrink: 0;
+  background: white;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+.reference-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.reference-modal {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.reference-modal-close {
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.reference-modal-close:hover {
+    background-color: #f0f0f0;
+}
+
+.reference-modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.reference-modal-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    white-space: pre-wrap;
+    padding-right: 10px;
+}
+
+.reference-circle {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.reference-circle:hover {
+    transform: scale(1.1);
+}
+
+/* Stop Button */
+.stop-btn {
+    background-color: #ff4444 !important;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.stop-btn:hover {
+    background-color: #ff0000 !important;
+}
+
+.stop-btn::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 2px;
+}

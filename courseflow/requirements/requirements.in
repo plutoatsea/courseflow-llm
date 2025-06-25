@@ -1,0 +1,19 @@
+
+black
+django-debug-toolbar
+isort
+pre-commit
+pytest-cov
+pytest-django
+pytest-asyncio
+redislite
+safety
+selenium
+tox
+twine
+xlsxwriter
+
+daphne >= 4
+twisted[tls] == 22.8.0
+
+-e file:./#egg=saltise_course_flow

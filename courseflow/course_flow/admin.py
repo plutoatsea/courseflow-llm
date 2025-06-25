@@ -1,0 +1,61 @@
+from django.contrib import admin
+
+from .models import (
+    Activity,
+    Column,
+    ColumnWorkflow,
+    Comment,
+    Course,
+    Discipline,
+    Favourite,
+    LiveAssignment,
+    LiveProject,
+    LiveProjectUser,
+    Node,
+    NodeLink,
+    NodeWeek,
+    ObjectPermission,
+    ObjectSet,
+    Outcome,
+    OutcomeHorizontalLink,
+    OutcomeNode,
+    OutcomeOutcome,
+    OutcomeWorkflow,
+    Program,
+    Project,
+    UpdateNotification,
+    UserAssignment,
+    Week,
+    WeekWorkflow,
+    Workflow,
+    WorkflowProject,
+)
+
+admin.site.register(Node)
+admin.site.register(Column)
+admin.site.register(ColumnWorkflow)
+admin.site.register(Week)
+admin.site.register(Activity)
+admin.site.register(Course)
+admin.site.register(Program)
+admin.site.register(NodeWeek)
+admin.site.register(NodeLink)
+admin.site.register(WeekWorkflow)
+admin.site.register(Workflow)
+admin.site.register(Project)
+admin.site.register(WorkflowProject)
+admin.site.register(Outcome)
+admin.site.register(OutcomeNode)
+admin.site.register(OutcomeOutcome)
+admin.site.register(OutcomeWorkflow)
+admin.site.register(ObjectPermission)
+admin.site.register(ObjectSet)
+admin.site.register(OutcomeHorizontalLink)
+admin.site.register(Discipline)
+admin.site.register(Favourite)
+admin.site.register(Comment)
+admin.site.register(LiveProject)
+admin.site.register(LiveProjectUser)
+admin.site.register(LiveAssignment)
+admin.site.register(UserAssignment)
+admin.site.register(UpdateNotification)

@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+
+build-job:
+  stage: build
+  script:
+    - apt-get update && apt-get install -y zip
+    - rm -rf ./data
+    - tar -xzvf db/db.tar.gz -C ./
+    - rm -rf db
+    - echo -e "API_KEY=\"$API_KEY\"\nOPENAI_API_KEY=\"$OPENAI_API_KEY\"\nRAG_EMBEDDING_MODEL=\"$RAG_EMBEDDING_MODEL\"" > .env
+    - zip -r llm.zip . -x ".git/*" "llm.zip" "db/*" "output/*" "data/*"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "production"'
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "production"'
+  artifacts:
+    paths:
+      - llm.zip
+
+test-job1:
+  stage: test
+  script:
+    - echo "TEST"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "production"'
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "production"'

@@ -1,0 +1,57 @@
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 5005:5005
+    volumes:
+      - ./chatbot:/home
+    networks:
+      - chatbot-net
+    environment:
+      - API_KEY
+      - LLM_PORT=11434
+      - HOST=ollama
+      - OPENAI_API_KEY
+      - RAG_EMBEDDING_MODEL
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5005/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # Mistral
+  # ollama:
+  #   build:
+  #     context: ./ollama
+  #     dockerfile: mistral.Dockerfile
+  #   ports:
+  #     - 11435:11434
+  #   volumes:
+  #     - chatbot-vol:/ollama
+  #   networks:
+  #     - chatbot-net
+  #   entrypoint: [ "/usr/bin/bash", "mistral7b.sh" ]
+
+  # Qwen
+  ollama:
+      build:
+        context: ./ollama
+        dockerfile: qwen.Dockerfile
+      ports:
+        - 11435:11434
+      volumes:
+        - chatbot-vol:/ollama
+      networks:
+        - chatbot-net
+      entrypoint: [ "/usr/bin/bash", "qwen05b.sh" ]
+
+networks:
+  chatbot-net:
+    driver: bridge
+
+volumes:
+  chatbot-vol:
+    driver: local

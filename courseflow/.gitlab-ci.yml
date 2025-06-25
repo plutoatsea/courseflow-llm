@@ -1,0 +1,25 @@
+stages:
+  - build
+  - test
+
+build-job:
+  stage: build
+  script:
+    - apt-get update && apt-get install -y zip
+    - rm -rf ./.circleci/
+    - rm -rf ./images/
+    - zip -r courseflow.zip . -x ".git/*" "courseflow.zip"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "production"'
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "production"'
+  artifacts:
+    paths:
+      - courseflow.zip
+
+test-job1:
+  stage: test
+  script:
+    - echo "TEST"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "production"'
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "production"'

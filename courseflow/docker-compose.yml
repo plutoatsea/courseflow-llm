@@ -1,0 +1,27 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: course_flow_web
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SUPERUSER_USERNAME: admin
+      DJANGO_SUPERUSER_EMAIL: admin@example.com
+      DJANGO_SUPERUSER_PASSWORD: admin123
+      REDIS_URL: "redis://cf-redis:6379/0"
+    depends_on:
+      - cf-redis
+    command: ["python", "course_flow.py", "runserver", "0.0.0.0:8000"]
+
+  cf-redis:
+    image: redis:7.2-alpine
+    container_name: course_flow_redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 5
+    ports:
+      - "6379:6379"

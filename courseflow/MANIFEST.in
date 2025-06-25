@@ -1,0 +1,18 @@
+include LICENSE
+include README.rst
+
+include pytest.ini
+exclude course_flow/local_settings.py
+
+recursive-include course_flow/management/commands *
+recursive-include course_flow/templates *
+recursive-include course_flow/locale *
+recursive-exclude course_flow/templates/course_flow/registration *
+
+graft course_flow/tests
+graft course_flow/static/course_flow/css
+graft course_flow/static/course_flow/img
+graft course_flow/static/course_flow/js
+
+global-exclude *.pyc
+global-exclude __pycache__
