@@ -23,7 +23,7 @@ A Fast and Flexible Few-shot Educational Assistant Built for CourseFlow<br><br>
 
 - [LLM](https://github.com/plutoatsea/courseflow-llm/tree/main/llm)
 
-*Frontend that uses a fork of the Courseflow APP (stable2 branch)* : **[CourseFlow Github](https://github.com/SALTISES4/CourseFlow/tree/stable-test2)**
+*Frontend that uses a fork of the Courseflow APP **(stable-test2 history branch)***
 
 
 - [COURSEFLOW](https://github.com/plutoatsea/courseflow-llm/tree/main/courseflow)
