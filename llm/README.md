@@ -31,7 +31,7 @@ tar -xzf ./db/db.tar.gz -C ./
 ```
 docker compose up
 ```
-**FYI**: Might take a while to download ollama models. If you don't want to install ollama models and stick to OpenAI, just comment out the ollama job in the docker compose.
+**FYI**: By default the docker compose is going to launch the OpenAI Model. If you wish to add a local model (qwen), remove the comments in the ollama job `line 25 to 36`. Depending on the machine, the installation might take a while to download ollama models.
 
 ## Setup Dev Environment
 
