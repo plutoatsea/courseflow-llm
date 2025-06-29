@@ -34,6 +34,8 @@ A Fast and Flexible Few-shot Educational Assistant Built for CourseFlow<br><br>
 
 **FYI**: If you wish to setup the project only for running, **use production instructions**. All setup instructions are included in `/courseflow` and `/llm` **README.md files**.
 
+**Here is the steps I used to deploy my project manually in the server:** [Production Setup](https://github.com/plutoatsea/courseflow-llm/blob/main/Documentation/SETUP-PRODUCTION.md)
+
 ## Demo
 
 #### [Watch the video](https://vimeo.com/1096313130)
