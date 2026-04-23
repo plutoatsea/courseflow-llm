@@ -32,10 +32,26 @@ A Fast and Flexible Few-shot Educational Assistant Built for CourseFlow<br><br>
 
 - [DOCUMENTATION](https://github.com/plutoatsea/courseflow-llm/tree/main/Documentation)
 
-**FYI**: If you wish to setup the project only for running, **use production instructions**. All setup instructions are included in `/courseflow` and `/llm` **README.md files**.
 
-**Here is the steps I used to deploy my project manually in the server:** [Production Setup](https://github.com/plutoatsea/courseflow-llm/blob/main/Documentation/SETUP-PRODUCTION.md)
+## **FYI**: 
+>If you wish to setup the project only for running, consult the **"Setup Production Environment"** headers which are included in `/courseflow` and `/llm` **README.md files**. (2 Links Above For Direct Access)
+
+**Here was the steps I used to deploy my project manually in the server (GitLab Only):** [Production Setup](https://github.com/plutoatsea/courseflow-llm/blob/main/Documentation/SETUP-PRODUCTION.md)
 
 ## Demo
 
-#### [Watch the video](https://vimeo.com/1096313130)
+1 - Generates Text (o3-mini/qwen)
+
+![Generates Text](Documentation/images/Hello.gif)
+
+2 - Stretch Chatbox
+
+![Stretch ChatBox](Documentation/images/slide.gif)
+
+3 - Add Generated Responses to the Course
+
+![Add](Documentation/images/add.gif)
+
+4 - Uses RAG Technology (Context Search and Reference)
+
+![RAG](Documentation/images/Reference.gif)

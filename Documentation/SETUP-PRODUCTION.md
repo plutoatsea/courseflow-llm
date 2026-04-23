@@ -1,5 +1,8 @@
 # Production Setup
 
+## **WARNING** - Project Used to be in GitLab. **Artifact Won't Exist**.
+> I created a .gitlab-ci.yml to create the artifact for production. (Refer to it if you want to replicate)
+
 **All instructions are in the README.md files on both `/llm & /courseflow` folders.**
 
 *Dawson College Server Production IP:* **N/A**

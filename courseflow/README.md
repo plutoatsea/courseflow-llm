@@ -17,6 +17,8 @@
 docker compose up
 ```
 
+**usr/pass (it is possible to change it in the docker-compose)** : admin/admin123
+
 The idea of how the llm setup will work:
 
 **The following commands need to be executed in seperate terminals**
@@ -56,8 +58,8 @@ Node Version: **14**
     yarn run gulp build-js | ./node_modules/gulp/bin/gulp.js build-js
     ```
 6. Migrate (Basically it creates and allocates all necessary DBs):
-```
-    python3.8 course_flow.py migrate
+    ```
+        python3.8 course_flow.py migrate
     ```
 7. If you don't have a local_settings.py set up, **change line 25 in settings.py** to:
 
@@ -222,7 +224,7 @@ or:
 (dev_venv) pytest
 ```
 
-# CourseFlow - ORIGINAL
+# CourseFlow - ORIGINAL Setup Instructions (might be outdated)
 
 [![CircleCI](https://circleci.com/gh/SALTISES4/CourseFlow.svg?style=svg)](https://circleci.com/gh/SALTISES4/CourseFlow)
 
