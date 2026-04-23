@@ -29,7 +29,7 @@ LTI_CLIENT_SECRET = "course_flow"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "10.55.9.34", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
 CHROMEDRIVER_PATH = None
 
@@ -119,7 +119,7 @@ CSP_INCLUDE_NONCE_IN = [
     "script-src",
     "style-src",
 ]
-CSP_DEFAULT_SRC = ["'self'", "*.mydalite.org", "http://localhost:5005", "http://10.55.9.34:5005"]
+CSP_DEFAULT_SRC = ["'self'", "*.mydalite.org", "http://localhost:5005"]
 CSP_SCRIPT_SRC = [
     "'self'",
     "*.mydalite.org",

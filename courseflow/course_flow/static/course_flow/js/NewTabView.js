@@ -57,7 +57,7 @@ class NewTabViewUnconnected extends React.Component {
                 formData.append('source', file.name);
                 formData.append('embedding_model', this.state.selectedModel === 'o3-mini' ? 'text-embedding-3-small' : 'nomic-embed-text');
 
-                const response = await fetch("http://10.55.9.34:5005/upload", {
+                const response = await fetch("http://localhost:5005/upload", {
                     method: "POST",
                     headers: {
                         "accept": "application/json",
@@ -207,7 +207,7 @@ class NewTabViewUnconnected extends React.Component {
         
         // Fetch AI Response
         try {
-            const response = await fetch("http://10.55.9.34:5005/generate", {
+            const response = await fetch("http://localhost:5005/generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -696,7 +696,7 @@ class NewTabViewUnconnected extends React.Component {
         this.setState({ isLoadingFiles: true });
         try {
             const collection = this.state.selectedModel === 'o3-mini' ? 'openaiusers' : 'ollamausers';
-            const response = await fetch(`http://10.55.9.34:5005/files?user_id=${user_name}&collection=${collection}`, {
+            const response = await fetch(`http://localhost:5005/files?user_id=${user_name}&collection=${collection}`, {
                 method: "GET",
                 headers: {
                     "accept": "application/json",
@@ -718,7 +718,7 @@ class NewTabViewUnconnected extends React.Component {
     handleDeleteFile = async (source) => {
         try {
             const collection = this.state.selectedModel === 'o3-mini' ? 'openaiusers' : 'ollamausers';
-            const response = await fetch(`http://10.55.9.34:5005/delete?collection_name=${collection}&user_id=${user_name}&source=${encodeURIComponent(source)}`, {
+            const response = await fetch(`http://localhost:5005/delete?collection_name=${collection}&user_id=${user_name}&source=${encodeURIComponent(source)}`, {
                 method: "DELETE",
                 headers: {
                     "accept": "application/json",

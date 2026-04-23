@@ -2,6 +2,9 @@
 FROM python:3.11-slim AS base
 
 RUN apt-get update -y && apt-get install -y \
+    build-essential \
+    python3-dev \
+    gcc \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
